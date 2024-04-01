@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useState } from "react"; // useState already imported
 import { useRouter } from "next/router";
 import facebookSvg from "@/images/Facebook.svg";
 import twitterSvg from "@/images/Twitter.svg";
@@ -31,6 +31,9 @@ const loginSocials = [
 const PageSignUp: FC<PageSignUpProps> = ({}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  // State initialization
+  // Username state variable
+  const [username, setUsername] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const router = useRouter();
@@ -40,7 +43,14 @@ const PageSignUp: FC<PageSignUpProps> = ({}) => {
       setError("Email and password are required");
       return false;
     }
-    // Add more validation logic as needed
+    if (!email.includes('@')) {
+      setError("Please enter a valid email address.");
+      return false;
+    }
+    if (password.length < 8) {
+      setError("Password must be at least 8 characters long.");
+      return false;
+    }
     return true;
   };
 
@@ -51,13 +61,13 @@ const PageSignUp: FC<PageSignUpProps> = ({}) => {
     setError("");
 
     try {
-      const response = await fetch('/api/users/signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password }),
-      });
+      const response = await axios.post('/api/users/signup', { email, password }, { withCredentials: true });
+      if (response.status === 200) {
+        localStorage.setItem('authToken', response.data.token);
+        router.push('/login');
+      } else {
+        setError(response.data.error || "An unexpected error occurred");
+      }
 
       if (response.ok) {
         router.push('/login');
@@ -115,6 +125,18 @@ const PageSignUp: FC<PageSignUpProps> = ({}) => {
                 className="mt-1"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+              />
+            </label>
+            <label className="block">
+              <span className="text-neutral-800 dark:text-neutral-200">
+                Username
+              </span>
+              <Input
+                type="text"
+                placeholder="Your username"
+                className="mt-1"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
               />
             </label>
             <label className="block">
