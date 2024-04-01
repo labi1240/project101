@@ -40,7 +40,14 @@ const PageSignUp: FC<PageSignUpProps> = ({}) => {
       setError("Email and password are required");
       return false;
     }
-    // Add more validation logic as needed
+    if (!email.includes('@')) {
+      setError("Please enter a valid email address.");
+      return false;
+    }
+    if (password.length < 8) {
+      setError("Password must be at least 8 characters long.");
+      return false;
+    }
     return true;
   };
 
@@ -51,13 +58,13 @@ const PageSignUp: FC<PageSignUpProps> = ({}) => {
     setError("");
 
     try {
-      const response = await fetch('/api/users/signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password }),
-      });
+      const response = await axios.post('/api/users/signup', { email, password }, { withCredentials: true });
+      if (response.status === 200) {
+        localStorage.setItem('authToken', response.data.token);
+        router.push('/login');
+      } else {
+        setError(response.data.error || "An unexpected error occurred");
+      }
 
       if (response.ok) {
         router.push('/login');
