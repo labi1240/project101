@@ -1,0 +1,313 @@
+[
+    {
+        "name": "Textbook Towns",
+        "status": "Registration",
+        "price": "$600,000's",
+        "authorId": 4,
+        "listingCategoryId": 10,
+        "incentives": "Not available",
+        "like": false,
+        "address": "3351 Ellesmere Road,",
+        "developer": "Profile Developments Inc.",
+        "buildingType": "Townhouse",
+        "unitsStories": "51 Units,",
+        "bedrooms": "Preconstruction",
+        "sizeSqFt": "Not available",
+        "href": "/project-listing-detail",
+        "estimatedCompletion": "Not available",
+        "summary": "Introducing Textbook Towns at 3351 Ellesmere Road in Scarborough\u2014a four-story development of 51 urban townhomes, ranging from studios to five bedrooms. Located just minutes away from U of T Scarborough Campus and Centennial College, it offers unmatched convenience near transit, parks, a hospital, Hwy 401, and shopping. Ideal for investors, this strategically positioned development taps into the constant demand for student housing.",
+        "units": [],
+        "street_name": "3351 Ellesmere Road,",
+        "city_name": "Toronto,",
+        "province": "ON",
+        "developer_info": "Profile Developments Inc., Toronto, ON",
+        "images": [
+            {
+                "ImageName": "Textbook Towns Rendering",
+                "ImageDescription": "Exterior photo of Textbook Towns",
+                "ImagePath": "https://d2kcmk0r62r1qk.cloudfront.net/imageSponsors/xlarge/2024_03_04_12_31_39_textbook-render.webp"
+            },
+            {
+                "ImageName": "Textbook Towns Terrace Rendering ",
+                "ImageDescription": "Exterior photo of Textbook Towns",
+                "ImagePath": "https://d2kcmk0r62r1qk.cloudfront.net/imageSponsors/xlarge/2024_03_04_12_34_15_textbook-towns-terrace-view.webp"
+            }
+        ],
+        "videos": [],
+        "_id": "id_1"
+    },
+    {
+        "name": "646 Yonge Street Condos",
+        "status": "Pending",
+        "price": "Not available",
+        "authorId": 4,
+        "like": true,
+        "listingCategoryId": 10,
+        "incentives": "Not available",
+        "address": "646 Yonge Street,",
+        "developer": "Kingsett Capital",
+        "buildingType": "Condo",
+        "unitsStories": "548 Units,",
+        "href": "/project-listing-detail",
+        "bedrooms": "Preconstruction",
+        "sizeSqFt": "Not available",
+        "estimatedCompletion": "Not available",
+        "summary": "Not available",
+        "units": [],
+        "street_name": "646 Yonge Street,",
+        "city_name": "Toronto,",
+        "province": "ON",
+        "developer_info": "Kingsett Capital, Toronto, ON",
+        "images": [],
+        "videos": [],
+        "_id": "id_2"
+    },
+    {
+        "name": "Springwater",
+        "status": "Registration",
+        "price": "Not available",
+        "authorId": 4,
+        "listingCategoryId": 10,
+        "incentives": "Pricing incentive",
+        "address": "3217 Elgin Mills Road East,",
+        "developer": "Mattamy Homes Canada",
+        "href": "/project-listing-detail",
+        "buildingType": "Townhouse & Single Family Home",
+        "unitsStories": "- Units,",
+        "bedrooms": "2 - 4 Bedrooms",
+        "sizeSqFt": "1830 - 3100 SqFt",
+        "estimatedCompletion": "Construction",
+        "summary": "Discover the landmark community in Markham that fuses beauty, innovation, ambition and grace.",
+        "units": [
+            {
+                "status": "For Sale",
+                "statusName": "Plans",
+                "colType": "Townhomes",
+                "unitType": "Plan",
+                "unitName": "Ruby End",
+                "br": 3,
+                "ba": 4,
+                "sqft": 2148,
+                "lotBalc": "",
+                "price": null,
+                "lastPrice": null,
+                "lastPriceWithValue": 1438990,
+                "unitStyle": "Two+ Story",
+                "url": "/markham-on/springwater/townhome-plan--rubyend",
+                "image": "https://d2kcmk0r62r1qk.cloudfront.net/imageFloorPlans/2023_09_05_05_41_17_ruby_end_english_manor.jpg"
+            },
+            {
+                "status": "For Sale",
+                "statusName": "Plans",
+                "colType": "Single-Family Homes",
+                "unitType": "Plan",
+                "unitName": "Sky",
+                "br": 4,
+                "ba": 3,
+                "sqft": 2170,
+                "lotBalc": "",
+                "price": null,
+                "lastPrice": null,
+                "lastPriceWithValue": 1682990,
+                "unitStyle": "Detached Two+ Story",
+                "url": "/markham-on/springwater/house-plan--sky",
+                "image": "https://d2kcmk0r62r1qk.cloudfront.net/imageFloorPlans/2021_10_01_04_05_11_sky_1.png"
+            },
+            {
+                "status": "For Sale",
+                "statusName": "Plans",
+                "colType": "Single-Family Homes",
+                "unitType": "Plan",
+                "unitName": "Iris",
+                "br": 4,
+                "ba": 3,
+                "sqft": 2361,
+                "lotBalc": "",
+                "price": null,
+                "lastPrice": null,
+                "lastPriceWithValue": 1986990,
+                "unitStyle": "Detached Two+ Story",
+                "url": "/markham-on/springwater/house-plan--iris",
+                "image": "https://d2kcmk0r62r1qk.cloudfront.net/imageFloorPlans/2021_10_01_04_06_00_iris_1.png"
+            }
+        ],
+        "street_name": "3217 Elgin Mills Road East,",
+        "city_name": "Markham,",
+        "province": "ON",
+        "developer_info": "Mattamy Homes Canada, Markham, ON",
+        "images": [
+            {
+                "ImageName": "Springwater Exterior Rendering ",
+                "ImageDescription": "Exterior photo of Springwater",
+                "ImagePath": "https://d2kcmk0r62r1qk.cloudfront.net/imageSponsors/xlarge/2021_10_01_04_15_20_8.webp"
+            },
+            {
+                "ImageName": "Springwater Exterior",
+                "ImageDescription": "Exterior photo of Springwater",
+                "ImagePath": "https://d2kcmk0r62r1qk.cloudfront.net/imageSponsors/xlarge/2023_09_05_06_00_58_springwater_exterior.webp"
+            },
+            {
+                "ImageName": "Springwater Exterior",
+                "ImageDescription": "Exterior photo of Springwater",
+                "ImagePath": "https://d2kcmk0r62r1qk.cloudfront.net/imageSponsors/xlarge/2023_09_05_06_00_39_springwater_exterior.webp"
+            }
+        ],
+        "videos": [],
+        "_id": "id_3"
+    },
+    {
+        "name": "Cherry Lane Towns",
+        "status": "Registration",
+        "price": "Not available",
+        "authorId": 4,
+        "like": false,
+        "listingCategoryId": 10,
+        "incentives": "Not available",
+        "address": "Not available",
+        "developer": "SkyHomes Corporation",
+        "buildingType": "Townhouse",
+        "href": "/project-listing-detail",
+        "unitsStories": "- Units,",
+        "bedrooms": "Preconstruction",
+        "sizeSqFt": "Not available",
+        "estimatedCompletion": "Not available",
+        "summary": "Cherry Lane Towns - Coming Soon: Modern Living Towns",
+        "units": [],
+        "street_name": "",
+        "city_name": "Mississauga,",
+        "province": "ON",
+        "developer_info": "SkyHomes Corporation, Mississauga, ON",
+        "images": [],
+        "videos": [],
+        "_id": "id_4"
+    },
+    {
+        "name": "The 11 on Charles",
+        "status": "Selling",
+        "price": "$1,089,900",
+        "authorId": 4,
+        "like": false,
+        "listingCategoryId": 10,
+        "incentives": "Pricing incentive",
+        "address": "59 Charles Street,",
+        "developer": "R.A.M. Contracting Limited",
+        "buildingType": "Townhouse",
+        "href": "/project-listing-detail",
+        "unitsStories": "11 Units,",
+        "bedrooms": "3 Bedrooms",
+        "sizeSqFt": "From 1535 SqFt",
+        "estimatedCompletion": "Completed Jul 2023",
+        "summary": "Welcome to NEWMARKET\u2019S most exclusive enclave of LUXURY townhomes!",
+        "units": [
+            {
+                "status": "For Sale",
+                "statusName": "Plans",
+                "colType": "Townhomes",
+                "unitType": "Plan",
+                "unitName": "Type A",
+                "br": 3,
+                "ba": 3,
+                "sqft": 1535,
+                "lotBalc": "",
+                "price": null,
+                "lastPrice": null,
+                "lastPriceWithValue": null,
+                "unitStyle": "Two+ Story",
+                "url": "/newmarket-on/the-11-on-charles/townhome-plan--type-a",
+                "image": "https://d2kcmk0r62r1qk.cloudfront.net/imageFloorPlans/2022_06_15_06_01_11_screenshot_2022-06-15_174449.png"
+            },
+            {
+                "status": "For Sale",
+                "statusName": "For Sale",
+                "colType": "Townhomes",
+                "unitType": "Unit",
+                "unitName": "Unit 6",
+                "br": 3,
+                "ba": 3,
+                "sqft": 1535,
+                "lotBalc": "",
+                "price": 1089900,
+                "lastPrice": 1089900,
+                "lastPriceWithValue": 1089900,
+                "unitStyle": "Two+ Story",
+                "url": "/newmarket-on/the-11-on-charles/townhome-unit--unit-6",
+                "image": "https://d2kcmk0r62r1qk.cloudfront.net/imageFloorPlans/2022_06_15_05_47_45_screenshot_2022-06-15_174449.png"
+            }
+        ],
+        "street_name": "59 Charles Street,",
+        "city_name": "Newmarket,",
+        "province": "ON",
+        "developer_info": "R.A.M. Contracting Limited, Matera Developments Inc, Newmarket, ON",
+        "images": [
+            {
+                "ImageName": "The 11 on Charles Exterior Rendering",
+                "ImageDescription": "Exterior photo of The 11 on Charles",
+                "ImagePath": "https://d2kcmk0r62r1qk.cloudfront.net/imageSponsors/xlarge/2021_11_08_01_28_46_q1v2_gardenview_final.webp"
+            }
+        ],
+        "videos": [
+            {
+                "VideoName": "The 11 on Charles",
+                "VideoDescription": "The 11 on Charles",
+                "VideoPath": "https://d2kcmk0r62r1qk.cloudfront.net/videos/UploadedVideos/637723269172630000_2021_11_12_03_14_51_animoto_video_1080p_mp4.mp4"
+            }
+        ],
+        "_id": "id_5"
+    },
+    {
+        "_id": "id_6",
+        "name": "Eagle Woods",
+        "status": "Selling",
+        "authorId": 4,
+        "like": false,
+        "listingCategoryId": 10,
+        "price": "$982,990",
+        "incentives": "Pricing incentive",
+        "address": "Sharplin Drive & Denny Street,",
+        "developer": "John Boddy Homes",
+        "buildingType": "Townhouse & Single Family Home",
+        "unitsStories": "565 Units,",
+        "bedrooms": "3 - 4 Bedrooms",
+        "href": "/project-listing-detail",
+        "sizeSqFt": "1885 - 3374 SqFt",
+        "estimatedCompletion": "Est. Compl. Nov 2024",
+        "summary": "Introducing Eagle Woods, a master-planned family community designed and built by John Boddy Homes. Located just south of Bayly Street at Audley Road South in Ajax, Eagle Woods is just a short walk to the shores of Lake Ontario, with its scenic parks, marinas and magnificent waterfront trails. Eagle Woods will offer many nearby neighbourhood amenities including public and separate school sites, places of worship, daycare facilities and fully-equipped parks. Bus service is readily available and the nearby GO Transit and 401 provide quick access to the Metro Toronto Area, providing Eagle Woods residents all the benefits of city living with the beauty and tranquility of the neighbouring lakeshore.",
+        "units": [
+            {
+                "status": "For Sale",
+                "statusName": "Plans",
+                "colType": "Single-Family Homes",
+                "unitType": "Plan",
+                "unitName": "The Kingsley - Elev. C",
+                "br": 3,
+                "ba": 3,
+                "sqft": 1885,
+                "lotBalc": "Lot. 24.6 Ft",
+                "price": 982990,
+                "lastPrice": 982990,
+                "lastPriceWithValue": 982990,
+                "unitStyle": "Semi-Detached Two Story",
+                "url": "/ajax-on/eagle-woods/house-plan--the-kingsley---elev-c",
+                "image": "/siteimages/development-new/unitsel-nounit.png"
+            }
+        ],
+        "street_name": "59 Charles Street,",
+        "city_name": "Newmarket,",
+        "province": "ON",
+        "developer_info": "R.A.M. Contracting Limited, Matera Developments Inc, Newmarket, ON",
+        "images": [
+            {
+                "ImageName": "The 11 on Charles Exterior Rendering",
+                "ImageDescription": "Exterior photo of The 11 on Charles",
+                "ImagePath": "https://d2kcmk0r62r1qk.cloudfront.net/imageSponsors/xlarge/2021_11_08_01_28_46_q1v2_gardenview_final.webp"
+            }
+        ],
+        "videos": [
+            {
+                "VideoName": "The 11 on Charles",
+                "VideoDescription": "The 11 on Charles",
+                "VideoPath": "https://d2kcmk0r62r1qk.cloudfront.net/videos/UploadedVideos/637723269172630000_2021_11_12_03_14_51_animoto_video_1080p_mp4.mp4"
+            }
+        ]
+    }
+]
