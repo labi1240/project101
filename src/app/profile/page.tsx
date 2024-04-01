@@ -1,17 +1,24 @@
 "use client";
 import axios from "axios";
 import Link from "next/link";
-import React, {useState} from "react";
+import React, { useEffect, useState } from "react";
 import {toast} from "react-hot-toast";
 import {useRouter} from "next/navigation";
 
 
 export default function ProfilePage() {
     const router = useRouter()
-    const [data, setData] = useState("nothing")
+    const [data, setData] = useState("nothing");
+
+    useEffect(() => {
+        const token = localStorage.getItem('token') || '';
+        if (!token) {
+            router.push('/login');
+        }
+    }, []);
     const logout = async () => {
         try {
-            await axios.get('/api/users/logout')
+            await axios.get('https://example.com/api/users/logout') // Updating URL to full path
             toast.success('Logout successful')
             router.push('/login')
         } catch (error:any) {
@@ -21,7 +28,14 @@ export default function ProfilePage() {
     }
 
     const getUserDetails = async () => {
-        const res = await axios.get('/api/users/me')
+        try {
+            const res = await axios.get('https://example.com/api/users/me'); // Updating URL to full path
+            console.log(res.data);
+            setData(res.data.data._id);
+        } catch (error) {
+            console.log(error.response ? error.response.data.message : error.message);
+            toast.error(error.response ? error.response.data.message : 'An error occurred while fetching user details.');
+        }
         console.log(res.data);
         setData(res.data.data._id)
     }
