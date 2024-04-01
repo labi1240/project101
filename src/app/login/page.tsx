@@ -23,19 +23,24 @@ export default function LoginPage() {
     const onLogin = async () => {
         try {
             setLoading(true);
-            const response = await axios.post("/api/users/login", user);
+            const response = await axios.post("https://example.com/api/users/login", user); // Assuming https://example.com is the full path needed
             console.log("Login success", response.data);
             toast.success("Login success");
             router.push("/profile");
         } catch (error:any) {
-            console.log("Login failed", error.message);
-            toast.error(error.message);
+            console.log("Login failed", error.response ? error.response.data.message : error.message);
+            toast.error(error.response ? error.response.data.message : "An unexpected error occurred during login.");
         } finally{
         setLoading(false);
         }
     }
 
     useEffect(() => {
+        const token = localStorage.getItem('token') || ''; // Added check for logged-in user
+        if (token) {
+            router.push('/profile'); // Redirect to profile if token exists
+            return;
+        }
         if(user.email.length > 0 && user.password.length > 0) {
             setButtonDisabled(false);
         } else{

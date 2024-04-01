@@ -13,11 +13,12 @@ export default function VerifyEmailPage() {
 
     const verifyUserEmail = async () => {
         try {
-            await axios.post('/api/users/verifyemail', {token})
+            await axios.post('https://example.com/api/users/verifyemail', {token}) // Assuming https://example.com is the full path needed
             setVerified(true);
         } catch (error:any) {
             setError(true);
-            console.log(error.reponse.data);
+            console.log(error.response ? error.response.data.message : error.message);
+            toast.error(error.response ? error.response.data.message : 'An unexpected error occurred during email verification.');
             
         }
 
