@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useState } from "react"; // useState already imported
 import { useRouter } from "next/router";
 import facebookSvg from "@/images/Facebook.svg";
 import twitterSvg from "@/images/Twitter.svg";
@@ -31,6 +31,9 @@ const loginSocials = [
 const PageSignUp: FC<PageSignUpProps> = ({}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  // State initialization
+  // Username state variable
+  const [username, setUsername] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const router = useRouter();
@@ -115,6 +118,18 @@ const PageSignUp: FC<PageSignUpProps> = ({}) => {
                 className="mt-1"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+              />
+            </label>
+            <label className="block">
+              <span className="text-neutral-800 dark:text-neutral-200">
+                Username
+              </span>
+              <Input
+                type="text"
+                placeholder="Your username"
+                className="mt-1"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
               />
             </label>
             <label className="block">
