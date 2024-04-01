@@ -12,6 +12,7 @@ export default function ProfilePage() {
     const logout = async () => {
         try {
             await axios.get('/api/users/logout')
+            localStorage.removeItem('authToken'); // Clear auth token from local storage
             toast.success('Logout successful')
             router.push('/login')
         } catch (error:any) {
@@ -21,9 +22,18 @@ export default function ProfilePage() {
     }
 
     const getUserDetails = async () => {
-        const res = await axios.get('/api/users/me')
-        console.log(res.data);
-        setData(res.data.data._id)
+        try {
+            const res = await axios.get('/api/users/me', {
+                headers: {
+                    'Authorization': `Bearer ${localStorage.getItem('authToken')}`
+                }
+            });
+            console.log(res.data);
+            setData(res.data.data._id);
+        } catch (error) {
+            console.log(error);
+            toast.error('Failed to fetch user details');
+        }
     }
 
     return (
