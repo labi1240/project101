@@ -7,6 +7,7 @@ import Input from "@/shared/Input";
 import ButtonPrimary from "@/shared/ButtonPrimary";
 import Image from "next/image";
 import Link from "next/link";
+import { validateSignupForm } from "src/utils/validateSignupForm";
 
 export interface PageSignUpProps {}
 
@@ -35,15 +36,16 @@ const PageSignUp: FC<PageSignUpProps> = ({}) => {
   // Username state variable
   const [username, setUsername] = useState("");
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [error, setError] = useState({ email: '', password: '', form: '' });
   const router = useRouter();
 
   const validateForm = () => {
-    if (!email || !password) {
-      setError("Email and password are required");
+    const validationResult = validateSignupForm(email, password);
+    if (!validationResult.isValid) {
+      setError(validationResult.errors);
       return false;
     }
-    // Add more validation logic as needed
+    setError({ email: '', password: '', form: '' });
     return true;
   };
 
@@ -66,10 +68,10 @@ const PageSignUp: FC<PageSignUpProps> = ({}) => {
         router.push('/login');
       } else {
         const data = await response.json();
-        setError(data.error || "An unexpected error occurred");
+        setError(prevState => ({...prevState, form: data.error || 'An unexpected error occurred'}));
       }
     } catch (error) {
-      setError(error.message || "An error occurred");
+      setError(prevState => ({...prevState, form: error.message || 'An error occurred'}));
     }
 
     setLoading(false);
@@ -119,6 +121,7 @@ const PageSignUp: FC<PageSignUpProps> = ({}) => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
+            {error.email && <p className="text-red-500 text-sm mt-2">{error.email}</p>}
             </label>
             <label className="block">
               <span className="text-neutral-800 dark:text-neutral-200">
@@ -137,6 +140,7 @@ const PageSignUp: FC<PageSignUpProps> = ({}) => {
                 Password
               </span>
               <Input type="password" className="mt-1" value={password} onChange={(e) => setPassword(e.target.value)} />
+            {error.password && <p className="text-red-500 text-sm mt-2">{error.password}</p>}
             </label>
             <ButtonPrimary type="submit" disabled={loading}>{loading ? 'Loading...' : 'Continue'}</ButtonPrimary>
           </form>
