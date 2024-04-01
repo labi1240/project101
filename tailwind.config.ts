@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
+import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette';
+
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 // Custom color with css variable color in __theme_color.scss
@@ -79,5 +81,6 @@ module.exports = {
     require("@tailwindcss/typography"),
     require("@tailwindcss/forms"),
     require("@tailwindcss/aspect-ratio"),
+    addVariablesForColors,
   ],
 };
