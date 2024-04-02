@@ -10,11 +10,11 @@ export async function POST(request: NextRequest){
     try {
 
         const reqBody = await request.json()
-        const {email, password} = reqBody;
+        const {username, password} = reqBody;
         console.log(reqBody);
 
         //check if user exists
-        const user = await User.findOne({email})
+        const user = await User.findOne({username})
         if(!user){
             return NextResponse.json({error: "User does not exist"}, {status: 400})
         }
